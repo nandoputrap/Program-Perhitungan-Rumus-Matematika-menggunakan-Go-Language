@@ -1,6 +1,5 @@
 // Program matematika sederhana
-// Created by: ndo_kun
-// Date: June 15 2020
+// Created by: ndo
 
 package main
 
@@ -26,89 +25,110 @@ func main() {
 	// fmt.Scanf("%d", strconv.Atoi(pilihBangun))
 	switch pilihBangun {
 	case 1:
-		fmt.Println("Luas Bangun Datar")
+		fmt.Println("\nLuas Bangun Datar\n")
 		fmt.Println("1. Persegi")
 		fmt.Println("2. Persegi Panjang")
 		fmt.Println("3. Segitiga")
-		fmt.Println("4. Lingkaran")
+		fmt.Println("4. Lingkaran \n")
 		fmt.Print("Pilih Bangun Datar: ")
 		fmt.Scan(&pilihBangunDatar)
 		switch pilihBangunDatar {
 		case 1:
-			fmt.Println("Luas Persegi")
-			fmt.Print("Masukkan sisi: ")
+			fmt.Println("\nLuas Persegi")
+			fmt.Print("Masukkan sisi (cm): ")
 			fmt.Scan(&s)
 			luas = s * s
-			fmt.Println(luas)
+			s := fmt.Sprint(s)
+			luas := fmt.Sprint(luas)
+			fmt.Println("\nLuas persegi dengan sisi " + s + " adalah " + luas + " cm2")
 		case 2:
-			fmt.Println("Luas Persegi Panjang")
-			fmt.Print("Masukkan panjang: ")
+			fmt.Println("\nLuas Persegi Panjang")
+			fmt.Print("Masukkan panjang (cm): ")
 			fmt.Scan(&p)
-			fmt.Print("Masukkan lebar: ")
+			fmt.Print("Masukkan lebar (cm): ")
 			fmt.Scan(&l)
 			luas = p * l
-			fmt.Println(luas)
+			p := fmt.Sprint(p)
+			l := fmt.Sprint(l)
+			luas := fmt.Sprint(luas)
+			fmt.Println("\nLuas persegi panjang dengan panjang " + p + " cm dan lebar " + l + " cm adalah " + luas + " cm2")
 		case 3:
-			fmt.Println("Luas Segitiga")
-			fmt.Print("Masukkan alas: ")
+			fmt.Println("\nLuas Segi Tiga")
+			fmt.Print("Masukkan alas (cm): ")
 			fmt.Scan(&a)
-			fmt.Print("Masukkan tinggi: ")
+			fmt.Print("Masukkan tinggi (cm): ")
 			fmt.Scan(&t)
 			luas = a * t / 2
-			fmt.Println(luas)
+			a := fmt.Sprint(a)
+			t := fmt.Sprint(t)
+			luas := fmt.Sprint(luas)
+			fmt.Println("\nLuas segi tiga dengan alas " + a + " cm dan tinggi " + t + " cm adalah " + luas + " cm2")
 		case 4:
-			fmt.Println("Luas lingkaran")
-			fmt.Print("Masukkan jari-jari: ")
+			fmt.Println("\nLuas lingkaran")
+			fmt.Print("Masukkan jari-jari (cm): ")
 			fmt.Scan(&r)
 			luas = phi * (r * r)
-			fmt.Println(luas)
+			r := fmt.Sprint(r)
+			luas := fmt.Sprint(luas)
+			fmt.Println("\nLuas segi tiga dengan jari-jari " + r + " cm adalah " + luas + " cm2")
 		default:
-			fmt.Println("Bangun ruang tidak ada")
+			fmt.Println("\nBangun ruang tidak ada")
 		}
 	case 2:
-		fmt.Println("Volume Bangun Ruang")
+		fmt.Println("\nVolume Bangun Ruang")
 		fmt.Println("1. Kubus")
 		fmt.Println("2. Balok")
 		fmt.Println("3. Kerucut")
 		fmt.Println("4. Bola")
-		fmt.Print("Pilih Bangun Ruang: ")
+		fmt.Print("\nPilih Bangun Ruang: ")
 		fmt.Scan(&pilihBangunRuang)
 		switch pilihBangunRuang {
 		case 1:
-			fmt.Println("Volume Kubus")
-			fmt.Print("Masukkan sisi: ")
+			fmt.Println("\nVolume Kubus")
+			fmt.Print("Masukkan sisi (cm): ")
 			fmt.Scan(&s)
 			volume = s * s * s
-			fmt.Println(volume)
+			s := fmt.Sprint(s)
+			volume := fmt.Sprint(volume)
+			fmt.Println("\nVolume kubus dengan sisi " + s + " adalah " + volume + " cm3")
 		case 2:
-			fmt.Println("Volume Balok")
-			fmt.Print("Masukkan panjang: ")
+			fmt.Println("\nVolume Balok")
+			fmt.Print("Masukkan panjang (cm): ")
 			fmt.Scan(&p)
-			fmt.Print("Masukkan lebar: ")
+			fmt.Print("Masukkan lebar (cm): ")
 			fmt.Scan(&l)
-			fmt.Print("Masukkan tinggi: ")
+			fmt.Print("Masukkan tinggi (cm): ")
 			fmt.Scan(&t)
 			volume = p * l * t
-			fmt.Println(volume)
+			p := fmt.Sprint(p)
+			l := fmt.Sprint(l)
+			t := fmt.Sprint(t)
+			volume := fmt.Sprint(volume)
+			fmt.Println("\nVolume balok dengan panjang " + p + " cm, lebar " + l + " cm, dan tinggi " + t + " cm adalah " + volume + " cm3")
 		case 3:
-			fmt.Println("Volume Kerucut")
-			fmt.Print("Masukkan jari-jari: ")
+			fmt.Println("\nVolume Kerucut")
+			fmt.Print("Masukkan jari-jari (cm): ")
 			fmt.Scan(&r)
-			fmt.Print("Masukkan tinggi: ")
+			fmt.Print("Masukkan tinggi: (cm) ")
 			fmt.Scan(&t)
 			// di golang jika ingin membagi float harus menggunakan angka dibelakang koma. Jika tidak maka hasilnya akan dianggap integer
 			volume = (1.0 / 3.0) * phi * (r * r) * t
-			fmt.Println(volume)
+			r := fmt.Sprint(r)
+			t := fmt.Sprint(t)
+			volume := fmt.Sprint(volume)
+			fmt.Println("\nVolume kerucut dengan jari-jari " + r + " cm dan tinggi " + t + " cm adalah " + volume + " cm3")
 		case 4:
-			fmt.Println("Volume Bola")
+			fmt.Println("\nVolume Bola")
 			fmt.Print("Masukkan jari-jari: ")
 			fmt.Scan(&r)
 			volume = (4.0 / 3.0) * phi * (r * r * r)
-			fmt.Println(volume)
+			r := fmt.Sprint(r)
+			volume := fmt.Sprint(volume)
+			fmt.Println("\nVolume bola dengan jari-jari " + r + " cm adalah " + volume + " cm3")
 		default:
-			fmt.Println("Bangun ruang tidak ada")
+			fmt.Println("\nBangun ruang tidak ada")
 		}
 	default:
-		fmt.Println("Terima Kasih...")
+		fmt.Println("\nMenu yang dipilih tidak ada...")
 	}
 }
